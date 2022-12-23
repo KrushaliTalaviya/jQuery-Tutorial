@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(250, 147, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body h4{
+    font-size: 30px;
+    font-weight: 100;
+}
+#myform{
+    background-color: aliceblue;
+    margin: 0% 20%;
+    height: 500px;
+    text-align: left;
+}
+input {  
+    border-radius: 5px;  
+    border: 1px solid rgb(82, 82, 82);  
+    padding: 4px;  
+    font-family: 'Lato';  
+    width: 300px;  
+    margin-top: 10px;  
+  }
+  #checkbox{
+    margin-left: 13%;
+    margin-right: -15%;
+    margin-top: 5%;
+  }  
+  label {  
+    width: 300px;  
+      
+    display: inline-block;  
+    margin-top: 20px;  
+    margin-left: 90px;
+  }  
+  label span {  
+    font-size: 1rem;  
+  } 
+  .submit{
+    margin-left: 30%;
+    margin-top: 1%;
+  }
+  label.error{
+    margin-left: 50%;
+    color: red;
+    font-size: small;
+  }

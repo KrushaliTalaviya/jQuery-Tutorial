@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+  <title>Document</title>
+  <script >
+      $(Document).ready(function(){
+        $("#btnsubmit").click(function(){
+          var x=$("input[type='radio']:checked");
+          if(x.length>0)
+          {
+            alert("select gender successfully");
+            return true;
+          }
+          else
+          {
+            $("#radio_error").text("please select a gender");
+            return false;
+          }
+        });
+      });
+  </script>
+  <style>
+    #radio_error{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <center>
+    <h2>Radio Button Validation</h2><br>
+    Male<input type="radio" id="male" name="gender">
+    Female<input type="radio" id="female" name="gender">
+    Other<input type="radio" id="other" name="gender"><br>
+    <font id="radio_error"></font><br>
+    <button style="border: 0ch; margin-top: 15px;" id="btnsubmit">Submit</button>
+    </center>
+  </form>
+</body>
+</html>
