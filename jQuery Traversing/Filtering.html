@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $("div").first().css("background-color","red");
+            $("div").last().css("background-color","lightblue");
+            $("div").eq(1).css("background-color","pink");
+            $("div").filter("#third").css("background-color","lightgrey");
+            $("button").click(function(){
+                $("div").not(".1st").css("background-color","yellow");
+            });
+        });
+    </script>
+    <style>
+         div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+        <div id="first"  class="1st" style="width: 300px; height: 100px;">
+            <p>This is a paragraph</p>
+            <h2>This is a heading</h2>
+        </div><br>
+        <div id="second" style="width: 300px; height: 100px;">
+            <p>This is a paragraph</p>
+            <h2>This is a heading</h2>
+        </div><br>
+        <div id="third" style="width: 300px; height: 100px;">
+            <p>This is a paragraph</p>
+            <h2>This is a heading</h2>
+        </div><br>
+        <div id="four" class="1st" style="width: 300px; height: 100px;">
+            <p>This is a paragraph</p>
+            <h2>This is a heading</h2>
+        </div>
+        <br>
+    <button>click here for see not method</button>
+</body>
+</html>
