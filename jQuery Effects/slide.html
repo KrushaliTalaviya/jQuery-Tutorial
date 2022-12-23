@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+    <style>
+        #div1{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+        #div2{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+           $("#button").click(function(){
+                $("#divf").slideUp(1000);
+           });
+           $("#button1").click(function(){
+                $("#divf").slideDown(1000);
+           });
+           $("#button2").click(function(){
+                $("#div2").slideToggle(1000);
+           });
+        });
+    </script>
+</head>
+<body>
+    <button type="button" id="button">Slide Up</button>
+    <button type="button" id="button1">Slide Down</button><br><br>
+    <div id="divf">
+        <div id="div1"></div><br>
+        <div id="div1"></div><br>
+        <div id="div1"></div><br>
+    </div>
+    <button type="button" id="button2">Slide Toggle</button><br><br>
+    <div id="div2"></div>
+</body>
+</html>

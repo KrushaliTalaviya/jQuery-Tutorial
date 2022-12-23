@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+        <style>
+            #div1{
+                height: 100px;
+                width: 100px;
+                background-color: aqua;
+            }
+            #div2{
+                height: 100px;
+                width: 100px;
+                background-color: red;
+            }
+            #div3{
+                height: 100px;
+                width: 100px;
+                background-color: yellow;
+            }
+            #div4{
+                height: 100px;
+                width: 100px;
+                background-color: darkblue;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("#div1").fadeOut("slow");
+                    $("#div2").fadeOut(1000);
+                });
+                $("#button2").click(function(){
+                    $("#div1").fadeIn("slow");
+                    $("#div2").fadeIn(1000);
+                });
+                $("#button3").hover(function(){
+                    $("#div3").fadeToggle("slow");
+                   
+                });
+                $("#button4").hover(function(){
+                    $("#div4").fadeTo("slow",0.1);
+                   
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button type="button">Perform Fade Out</button>
+        <button type="button" id="button2">Perform Fade In</button>
+        
+        <div id="div1"></div><br>
+        <div id="div2"></div><br>
+        <button type="button" id="button3">Perform Fade toggle</button><br><br>
+        <div id="div3"></div><br>
+        <button type="button" id="button4">Perform FadeTo</button><br><br>
+        <div id="div4"></div>
+    </body>
+</html>
