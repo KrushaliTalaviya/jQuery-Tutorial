@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+    <style>
+        p{
+            padding: 15px;
+            background-color: aqua;
+            font-size: 25px;
+            color: black;
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("input").keydown(function(){
+                document.getElementById("span1").innerHTML="key down";
+            })
+            $("input").keypress(function(){
+                document.getElementById("span1").innerHTML="key press";
+            })
+            $("input").keyup(function(){
+                document.getElementById("span1").innerHTML="key up";
+            })
+           
+        });
+    </script>
+
+</head>
+<body>Name:
+    <input type="text" >
+    <span id="span1" style="color: red;"></span>
+</body>
+</html>

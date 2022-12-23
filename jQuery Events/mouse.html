@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+    <style>
+        p{
+            padding: 15px;
+            background-color: aqua;
+            font-size: 25px;
+            color: black;
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("p").mouseenter(function(){
+                document.getElementById("span1").innerHTML="mouse enter";
+            })
+            $("p").mouseleave(function(){
+                document.getElementById("span1").innerHTML="mouse leave";
+            })
+            $("p").mousedown(function(){
+                document.getElementById("span1").innerHTML="mouse pressed";
+            })
+           
+        });
+    </script>
+
+</head>
+<body>
+    <p>This is a paragraph</p>
+    <span id="span1"></span>
+</body>
+</html>
