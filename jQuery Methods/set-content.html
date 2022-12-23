@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("p").text("This is a Text set");
+            });
+            $("#btn2").click(function(){
+               $("p").html("This is a Html set");
+            });
+            $("#btn3").click(function(){
+                $("#in1").val("Horse");
+            });
+            //using callback
+            $("#btn4").click(function(){
+                $("#p1").text(function(i,original){
+                    return original + "this is a new callback Text set";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="p1">
+        This is a paragraph.
+    </p>
+    <button id="btn1">set Text</button>
+    <button id="btn2">set Html</button>
+    <button id="btn4">set text using callback</button><br><br>
+    Name:&nbsp;<input type="text" value="Monkey" id="in1">
+    <input type="submit" id="btn3"  value="set value">
+</body>
+</html>
