@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.get("1.txt " ,function(data,status){
+                    alert(""+data+"\nstatus: "+status);
+                    var text=document.createElement("i");
+                    text.innerHTML=""+data;
+                    $("body").append(text);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>send a HTTP get request and its take data from the server </button>
+    <div id="div1">
+
+    </div>
+</body>
+</html>

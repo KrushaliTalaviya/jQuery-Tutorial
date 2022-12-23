@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").load("1.txt",function(responseTxt, statusTxt,xhr){
+                    if(statusTxt=="success"){
+                        alert("you loaded data successfully");
+                    }
+                    if(statusTxt=="error"){
+                        alert("error:"+xhr.status+":"+xhr.statusText);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div1">This is using callback content change</div>
+    <button>Using callback</button>
+</body>
+</html>
