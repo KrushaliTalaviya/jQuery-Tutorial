@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <title>Document</title>
-    <script>
-        $(document).ready(function(){
-            $("#btn1").click(function(){
-                $("#divin1,#divin2").children().css({"color": "red", "border": "2px solid red"});
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>Document</title>
+        <script>
+            $(document).ready(function(){
+                
+                //for show the childern of perticular divison
+                $("#btn1").click(function(){
+                    $("#divin1,#divin2").children().css({"color": "red", "border": "2px solid red"});
+                });
+                
+                //for show the perticular no. of childern
+                $("#btn2").click(function(){
+                    $("#divin1,#divin2").children("ul.second").css({"color": "green", "border": "2px solid green"});
+                });
+                
+                //for find a perticular tag into the div
+                $("#btn3").click(function(){
+                    $("#div1").find("li").css({"color": "blue", "border": "2px solid blue"});
+                });
+                
             });
-            $("#btn2").click(function(){
-                $("#divin1,#divin2").children("ul.second").css({"color": "green", "border": "2px solid green"});
-            });
-            $("#btn3").click(function(){
-                $("#div1").find("li").css({"color": "blue", "border": "2px solid blue"});
-            });
-        });
-    </script>
-    <style>
-        #div1 *{
-            border: 2px solid lightgray;
-            display: block;
-            padding: 5px;
-            margin: 15px;
-            color: lightgray;
-        }
-    </style>
-</head>
-<body>
-    <div id="div1">
-        <div id="divin1" style="width: 500px;">current element
-            <ul>child
-                <li>grand-child
-                    <span class="first">great-grandchild</span>
-                </li>
-            </ul>           
+        </script>
+        <style>
+            #div1 *{
+                border: 2px solid lightgray;
+                display: block;
+                padding: 5px;
+                margin: 15px;
+                color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            <div id="divin1" style="width: 500px;">current element
+                <ul>child
+                    <li>grand-child
+                        <span class="first">great-grandchild</span>
+                    </li>
+                </ul>           
+            </div>
+            <div id="divin2" style="width: 500px;">current element
+                <ul class="second">child
+                    <li>grand-child
+                        <span>great-grandchild</span>
+                    </li>
+                </ul>           
+            </div>
         </div>
-        <div id="divin2" style="width: 500px;">current element
-            <ul class="second">child
-                <li>grand-child
-                    <span>great-grandchild</span>
-                </li>
-            </ul>           
-        </div>
-       
-    </div>
-    <button id="btn1">See All child</button>
-    <button id="btn2">See perticular child</button>
-    <button id="btn3">find the child</button>
-</body>
+        <button id="btn1">See All child</button>
+        <button id="btn2">See perticular child</button>
+        <button id="btn3">find the child</button>
+    </body>
 </html>
