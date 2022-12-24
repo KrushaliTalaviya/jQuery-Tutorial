@@ -27,18 +27,25 @@
         </style>
         <script>
             $(document).ready(function(){
+                
+                //for fadeout event
                 $("button").click(function(){
                     $("#div1").fadeOut("slow");
                     $("#div2").fadeOut(1000);
                 });
+                
+                //for fasein event
                 $("#button2").click(function(){
                     $("#div1").fadeIn("slow");
                     $("#div2").fadeIn(1000);
                 });
+                
+                //for fade toggle event
                 $("#button3").hover(function(){
                     $("#div3").fadeToggle("slow");
-                   
-                });
+                 });
+                
+                //for fate to event
                 $("#button4").hover(function(){
                     $("#div4").fadeTo("slow",0.1);
                    
@@ -49,7 +56,6 @@
     <body>
         <button type="button">Perform Fade Out</button>
         <button type="button" id="button2">Perform Fade In</button>
-        
         <div id="div1"></div><br>
         <div id="div2"></div><br>
         <button type="button" id="button3">Perform Fade toggle</button><br><br>
