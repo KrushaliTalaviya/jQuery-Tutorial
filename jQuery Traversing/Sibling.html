@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <title>Document</title>
-    <script>
-        $(document).ready(function(){
-            $("#btn1").click(function(){
-                $("h2").siblings().css({"color": "red", "border": "2px solid red"});
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>Document</title>
+        <script>
+            $(document).ready(function(){
+                
+                //for siblings method in traversing
+                $("#btn1").click(function(){
+                    $("h2").siblings().css({"color": "red", "border": "2px solid red"});
+                });
+                
+                $("#btn2").click(function(){
+                    $("h2").siblings("p").css({"color": "green", "border": "2px solid green"});
+                });
+                
+                //for a next method in traversing
+                $("#btn3").click(function(){
+                    $("h2").next().css({"color": "blue", "border": "2px solid blue"});
+                });
+                $("#btn4").click(function(){
+                    $("h2").nextAll().css({"color": "darkred", "border": "2px solid darkred"});
+                });
+                
+                $("#btn5").click(function(){
+                    $("h2").nextUntil("h4").css({"color": "lightblue", "border": "2px solid lightblue"});
+                });
             });
-            $("#btn2").click(function(){
-                $("h2").siblings("p").css({"color": "green", "border": "2px solid green"});
-            });
-            $("#btn3").click(function(){
-                $("h2").next().css({"color": "blue", "border": "2px solid blue"});
-            });
-            $("#btn4").click(function(){
-                $("h2").nextAll().css({"color": "darkred", "border": "2px solid darkred"});
-            });
-            $("#btn5").click(function(){
-                $("h2").nextUntil("h4").css({"color": "lightblue", "border": "2px solid lightblue"});
-            });
-        });
-    </script>
-    <style>
-        #div1 *{
-            border: 2px solid lightgray;
-            display: block;
-            padding: 5px;
-            margin: 15px;
-            color: lightgray;
-        }
-    </style>
-</head>
-<body>
-    <div id="div1">
-        <div id="div2">div(parent)
-            <p>This is a p tag</p>
-            <h2>This is a H2 tag</h2>
-            <span>This is a span tag</span>
-            <h2>This is a H2 tag</h2>
-            <h3>This is a H3 tag</h3>
-            <h4>This is a H4 tag</h4>
-            <p>This is a p tag</p>
+        </script>
+        <style>
+            #div1 *{
+                border: 2px solid lightgray;
+                display: block;
+                padding: 5px;
+                margin: 15px;
+                color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            <div id="div2">div(parent)
+                <p>This is a p tag</p>
+                <h2>This is a H2 tag</h2>
+                <span>This is a span tag</span>
+                <h2>This is a H2 tag</h2>
+                <h3>This is a H3 tag</h3>
+                <h4>This is a H4 tag</h4>
+                <p>This is a p tag</p>
+            </div>
         </div>
-    </div>
-    <button id="btn1">See  all siblings</button>
-    <button id="btn2">See sibling of p</button>
-    <button id="btn3">next sibling of h2</button>
-    <button id="btn4">next all sibling of h2</button>
-    <button id="btn5">next untill sibling of h4</button>
-</body>
+        <button id="btn1">See  all siblings</button>
+        <button id="btn2">See sibling of p</button>
+        <button id="btn3">next sibling of h2</button>
+        <button id="btn4">next all sibling of h2</button>
+        <button id="btn5">next untill sibling of h4</button>
+    </body>
 </html>
