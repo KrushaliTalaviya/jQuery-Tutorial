@@ -1,68 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script> 
-    <script> 
-        $(function () {
-            $(".text1").keydown(function (e) {
-                if (e.shiftKey || e.ctrlKey || e.altKey) {
-                    e.preventDefault();
-                } 
-                else {
-                    var key = e.keyCode;
-                    if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
-                    e.preventDefault();
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script> 
+        <script> 
+            $(function () {
+                
+                //for a block the numertic or special charcter
+                $(".text1").keydown(function (e) {
+                    if (e.shiftKey || e.ctrlKey || e.altKey) {
+                        e.preventDefault();
+                    } 
+                    else {
+                        var key = e.keyCode;
+                        if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                        e.preventDefault();
+                        }
                     }
-                }
+                });
             });
-        });
-        $(document).ready (function () {  
-          $("#myform").validate();
-     
-        });  
-        
-        function validate1(){
-            $(document).ready(function(){
-            $(".submit").click(function(){
-                if($('input[type="checkbox"]').is(":checked"))
-                {
-                   
-                    return true;
-                }
-                else if($('input[type="checkbox"]').is(":not(:checked)"))
-                {
-                    alert("please follow the terms and conditions");
-                    return false;
-                }
-            });
-        });
-        }
-       
-        
-        
-        
-    </script>
-</head>
-<body>
-    <center>
-        <h4>jQuery Validation Form</h4>
-        <form id="myform">
-            <label>First Name<span>(required, at least 8 characters):</span></label>
-            <input type="name" id="name" name="name" minlength="8" class="text1" autocomplete="off" required><br>
-            <label>Last Name:<span></span></label>
-            <input type="name" id="name" name="name" minlength="8" class="text1" autocomplete="off" required><br>
-            <label>Email<span>(required):</span></label>
-            <input type="email" id="email" name="email"  required ><br>
-            <label>Password:<span></span></label>
-            <input type="password" id="password" name="password"  required><br>
-            <p><input type="checkbox" id="checkbox" onclick="validate2()">I agree the terms & conditions</p><br>
-            <input class="submit" type="submit" value="SUBMIT" onclick="validate1()" >
-        </form>
-    </center>
-</body>
+            
+            //for a jQuery auto validation
+            $(document).ready (function () {  
+              $("#myform").validate();
+            });  
+
+            //for a checkbox validation
+            function validate1(){
+                $(document).ready(function(){
+                    $(".submit").click(function(){
+                       if (x.length > 0) {
+                            alert("select gender successfully");
+                            return true;
+                        } else {
+                            $("#radio_error").text("please select a gender");
+                            return false;
+                           }
+                    });
+                });
+            }
+       </script>
+    </head>
+    <body>
+        <center>
+            <h4>jQuery Validation Form</h4>
+            <form id="myform">
+                <label>First Name<span>(required, at least 8 characters):</span></label>
+                <input type="name" id="name" name="name" minlength="8" class="text1" autocomplete="off" required><br>
+                <label>Last Name:<span></span></label>
+                <input type="name" id="name" name="name" minlength="8" class="text1" autocomplete="off" required><br>
+                <label>Email<span>(required):</span></label>
+                <input type="email" id="email" name="email"  required ><br>
+                <label>Password:<span></span></label>
+                <input type="password" id="password" name="password"  required><br>
+                <p><input type="checkbox" id="checkbox" onclick="validate2()">I agree the terms & conditions</p><br>
+                <input class="submit" type="submit" value="SUBMIT" onclick="validate1()" >
+            </form>
+        </center>
+    </body>
 </html>
