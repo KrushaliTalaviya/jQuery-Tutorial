@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-    <style>
-        p{
-            padding: 15px;
-            background-color: aqua;
-            font-size: 25px;
-            color: black;
-            text-align: center;
-        }
-    </style>
-    <script>
-        $(document).ready(function(){
-            $("p").click(function(){
-                document.getElementById("span1").innerHTML="mouse clicked";
-            })
-            $("p").dblclick(function(){
-                document.getElementById("span1").innerHTML="mouse double clicked";
-            })
-        });
-    </script>
+    <head>
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+        <style>
+            p{
+                padding: 15px;
+                background-color: aqua;
+                font-size: 25px;
+                color: black;
+                text-align: center;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                
+                //mouse click event
+                $("p").click(function(){
+                    document.getElementById("span1").innerHTML="mouse clicked";
+                });
+                
+                //mouse double click event
+                $("p").dblclick(function(){
+                    document.getElementById("span1").innerHTML="mouse double clicked";
+                });
+                
+            });
+        </script>
 
-</head>
-<body>
-    <p>This is a paragraph</p>
-    <span id="span1"></span>
-</body>
+    </head>
+    <body>
+        <p>This is a paragraph</p>
+        <span id="span1"></span>
+    </body>
 </html>
