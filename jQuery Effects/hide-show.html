@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
-    <style>
-        #div1{
-            height: 100px;
-            width: 100px;
-            background-color: aqua;
-        }
-    </style>
-    <script>
-        $(document).ready(function(){
-           $("#btnhide").click(function(){
-                $("#divf").hide(1000);
-           });
-           $("#btnshow").click(function(){
-                $("#divf").show(1000);
-           });
-           $("p,h1,h2").click(function()
-           {
-                $(this).hide();
-           });
-        });
-    </script>
-</head>
-<body>
-    <button type="button" id="btnhide">Hide Box</button>
-    <button type="button" id="btnshow">Show Box</button><br><br>
-    <div id="divf">
-        <div id="div1"></div><br>
-        <div id="div1"></div><br>
-        <div id="div1"></div><br>
-    </div>
-    <p>If you Click on me then i will Disapper</p>
-    <h1>Away From me!</h1>
-    <h2>Please Away</h2>
-</body>
+    <head>
+        <title>Document</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+        <style>
+            #div1{
+                height: 100px;
+                width: 100px;
+                background-color: aqua;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                
+                //hide the content
+               $("#btnhide").click(function(){
+                    $("#divf").hide(1000);
+               });
+                
+                //show the content which is hide
+               $("#btnshow").click(function(){
+                    $("#divf").show(1000);
+               });
+                
+                //hide the content for a perticular tag
+               $("p,h1,h2").click(function()
+               {
+                    $(this).hide();
+               });
+                
+            });
+        </script>
+    </head>
+    <body>
+        <button type="button" id="btnhide">Hide Box</button>
+        <button type="button" id="btnshow">Show Box</button><br><br>
+        <div id="divf">
+            <div id="div1"></div><br>
+            <div id="div1"></div><br>
+            <div id="div1"></div><br>
+        </div>
+        <p>If you Click on me then i will Disapper</p>
+        <h1>Away From me!</h1>
+        <h2>Please Away</h2>
+    </body>
 </html>
