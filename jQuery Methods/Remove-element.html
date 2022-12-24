@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <title>Document</title>
-    <script>
-        $(document).ready(function(){
-            $("#btn").click(function(){
-                $("#div1").remove();
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>Document</title>
+        <script>
+            
+            $(document).ready(function(){
+                
+                //for a remove the div
+                $("#btn").click(function(){
+                    $("#div1").remove();
+                });
+                //for a empty the div
+                $("#btn1").click(function(){
+                    $("#div2").empty("p");
+                });
+                //remove a perticular class tag
+                $("#btn2").click(function(){
+                    $("p").remove(".p1");
+                })
+                
             });
-            $("#btn1").click(function(){
-                $("#div2").empty("p");
-            });
-            $("#btn2").click(function(){
-                $("p").remove(".p1");
-            })
-        });
-    </script>
-    <style>
-        #div1{
-            background-color: aqua;
-            color: black;
-            width: 300px;
-            height: 100px;
-            text-align: center;
-        }
-        #div2{
-            background-color: yellowgreen;
-            color: black;
-            width: 300px;
-            height: 100px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>div1:
-    <div id="div1">
+        </script>
+        <style>
+            #div1{
+                background-color: aqua;
+                color: black;
+                width: 300px;
+                height: 100px;
+                text-align: center;
+            }
+            #div2{
+                background-color: yellowgreen;
+                color: black;
+                width: 300px;
+                height: 100px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>div1:
+        <div id="div1">
+            <p>this is a first line.</p>
+            <p class="p1">this is a second line.</p>
+            <p class="p2">this is a third line.</p>
+        </div>
+        <button id="btn">Remove div1</button>
+        <br>
+        <div id="div2">
+            <p>this is a first line.</p>
+            <p >this is a second line.</p>
+            <p>this is a third line.</p>
+        </div>
+        <button id="btn1">Remove p tag in div2</button>
         <p>this is a first line.</p>
         <p class="p1">this is a second line.</p>
-        <p class="p2">this is a third line.</p>
-    </div>
-    <button id="btn">Remove div1</button>
-    <br>
-    <div id="div2">
-        <p>this is a first line.</p>
-        <p >this is a second line.</p>
-        <p>this is a third line.</p>
-    </div>
-    <button id="btn1">Remove p tag in div2</button>
-    <p>this is a first line.</p>
-    <p class="p1">this is a second line.</p>
-    <p class="p2">this is a third line.</p><br>
-    <button id="btn2">Remove all p tag which class p1</button>
-</body>
+        <p class="p2">this is a third line.</p><br>
+        <button id="btn2">Remove all p tag which class p1</button>
+    </body>
 </html>
