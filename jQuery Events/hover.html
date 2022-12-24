@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-    <style>
-        p{
-            padding: 15px;
-           
-            font-size: 25px;
-            color: black;
-            text-align: center;
-        }
-    </style>
-    <script>
-        $(document).ready(function(){
-            $("p").hover(function(){
-                $(this).css("background-color","green");
-            },function(){
-                $(this).css("background-color","aqua")
+    <head>
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+        <style>
+            p{
+                padding: 15px;
+                font-size: 25px;
+                color: black;
+                text-align: center;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                
+                $("p").hover(function(){
+                    $(this).css("background-color","green");
+                },function(){
+                    $(this).css("background-color","aqua");
+                });
+            
             });
-           
-           
-        });
-    </script>
-
-</head>
-<body>
-    <p>This is a paragraph</p>
-    <span id="span1"></span>
-</body>
+        </script>
+    </head>
+    <body>
+        <p>This is a paragraph</p>
+        <span id="span1"></span>
+    </body>
 </html>
