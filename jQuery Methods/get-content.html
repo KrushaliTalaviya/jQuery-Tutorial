@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#btn1").click(function(){
-                alert("By Text get:"+$("p").text());
+    <head>
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                //for get text content
+                $("#btn1").click(function(){
+                    alert("By Text get:"+$("p").text());
+                });
+
+                //for get a html content
+                $("#btn2").click(function(){
+                    alert("By Html get:" +$("p").html());
+                });
+
+                //for a get a value
+                $("#btn3").click(function(){
+                    alert("By value get: "+$("#in1").val());
+                });
+
             });
-            $("#btn2").click(function(){
-                alert("By Html get:" +$("p").html());
-            });
-            $("#btn3").click(function(){
-                alert("By value get: "+$("#in1").val());
-            });
-        });
-    </script>
-</head>
-<body>
-    <p id="p1">
-        This is a paragraph.
-    </p>
-    <button id="btn1">Get Text</button>
-    <button id="btn2">Get Html</button><br><br>
-    Name:&nbsp;<input type="text" value="Monkey" id="in1">
-    <input type="submit" id="btn3" value="set values">
-</body>
+        </script>
+    </head>
+    <body>
+        <p id="p1">
+            This is a paragraph.
+        </p>
+        <button id="btn1">Get Text</button>
+        <button id="btn2">Get Html</button><br><br>
+        Name:&nbsp;
+        <input type="text" value="Monkey" id="in1" />
+        <input type="submit" id="btn3" value="set values" />
+    </body>
 </html>
