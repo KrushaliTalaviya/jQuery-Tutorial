@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
-    <style>
-        #div1{
-            height: 100px;
-            width: 100px;
-            background-color: aqua;
-        }
-    </style>
-    <script>
-        $(document).ready(function(){
-           $("#button1").click(function(){
-                $("#divf").toggle(1000);
-           });
-           $("#button2").click(function(){
-                $("p,h1,h2").toggle(1000);
-           });
-           
-        });
-    </script>
-</head>
-<body>
-    <button type="button" id="button1">Click me</button><br><br>
-    <div id="divf">
-        <div id="div1"></div><br>
-        <div id="div1"></div><br>
-        <div id="div1"></div><br>
-    </div>
-    <button type="button" id="button2">Click me</button>
- 
+    <head>
+        <title>Document</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+        <style>
+            #div1{
+                height: 100px;
+                width: 100px;
+                background-color: aqua;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                
+                //for a toggle event
+               $("#button1").click(function(){
+                    $("#divf").toggle(1000);
+               });
+               $("#button2").click(function(){
+                    $("p,h1,h2").toggle(1000);
+               });
+
+            });
+        </script>
+    </head>
+    <body>
+        <button type="button" id="button1">Click me</button><br><br>
+        <div id="divf">
+            <div id="div1"></div><br>
+            <div id="div1"></div><br>
+            <div id="div1"></div><br>
+        </div>
+        <button type="button" id="button2">Click me</button>
         <p>If you Click on me then i will Disapper</p>
         <h1>Away From me!</h1>
         <h2>Please Away</h2>
-    
-</body>
+    </body>
 </html>
