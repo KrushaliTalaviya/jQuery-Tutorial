@@ -4,23 +4,23 @@
         <title>Document</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
         <script>
-            $(document).ready(function(){
-                
+           $(document).ready(function() {
+
                 //change inner HTML
-                $("select").change(function(){
-                    document.getElementById("span1").innerHTML="You are  changed selction and your selection is: "+document.getElementById("sel").value;
+                $("select").change(function() {
+                    document.getElementById("span1").innerHTML = "You are  changed selction and your selection is: " + document.getElementById("sel").value;
                 });
-                
+
                 //input verification if input is hello than success
-                $("form").submit(function(event){
-                    if($("input:first").val()==="hello"){
+                $("form").submit(function(event) {
+                    if ($("input:first").val() === "hello") {
                         $("#span2").text("success").show();
                         return;
                     }
                     $("#span2").text("not valid").show().fadeOut(2000);
                     event.preventDefault();
                 });
-                
+
             });
         </script>
     </head>
