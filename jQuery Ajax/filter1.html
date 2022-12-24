@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#myInput").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#myTable tr").filter(function(){
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                }); 
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                
+                //serch for element
+                $("#myInput").on("keyup", function () {  
+                    var value = $(this).val().toLowerCase();
+                    
+                    //filtering the value
+                    $("#myTable tr").filter(function(){ 
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    }); 
+                });
+                
             });
-        });
-        
-    </script>
-    <style>
-        table{
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th,td{
-            padding: 10px;
-            border: 1px solid #dddddd;
-        }
-        tr:nth-child(even){
-            background-color: #79777746;
-        }
-    </style>
-</head>
-<body>
-   <p>this is the use of a jQuery Ajax filter method</p><br>
-   <input type="text" placeholder="serch.." id="myInput"><br>
-   <br>
-   <table>
-        <thead>
-            <tr>
-                <th>FirstName</th>
-                <th>LastName</th>
-                <th>Email-Id</th>
-            </tr>
-        </thead>
-        <tbody id="myTable">
-            <tr>
-                <td>One</td>
-                <td>dsd</td>
-                <td>Okaya@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Two</td>
-                <td>sdfg</td>
-                <td>Byea@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Three</td>
-                <td>sdwds</td>
-                <td>Seeesx@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Four</td>
-                <td>wsdwsed</td>
-                <td>nosd@gmail.com</td>
-            </tr>
-        </tbody>
-   </table>
-</body>
+
+        </script>
+        <style>
+            table{
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th,td{
+                padding: 10px;
+                border: 1px solid #dddddd;
+            }
+            tr:nth-child(even){
+                background-color: #79777746;
+            }
+        </style>
+    </head>
+    <body>
+       <p>this is the use of a jQuery Ajax filter method</p><br>
+       <input type="text" placeholder="serch.." id="myInput" \><br>
+       <br>
+       <table>
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email-Id</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr>
+                    <td>One</td>
+                    <td>dsd</td>
+                    <td>Okaya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Two</td>
+                    <td>sdfg</td>
+                    <td>Byea@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Three</td>
+                    <td>sdwds</td>
+                    <td>Seeesx@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Four</td>
+                    <td>wsdwsed</td>
+                    <td>nosd@gmail.com</td>
+                </tr>
+            </tbody>
+       </table>
+    </body>
 </html>
