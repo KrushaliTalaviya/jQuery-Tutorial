@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
-    <style>
-        #div1{
-            height: 100px;
-            width: 100px;
-            background-color: aqua;
-        }
-        #div2{
-            height: 100px;
-            width: 100px;
-            background-color: red;
-        }
-    </style>
-    <script>
-        $(document).ready(function(){
-           $("#button").click(function(){
-                $("#div1").slideUp(5000);
-           });
-           $("#button1").click(function(){
-                $("#div1").slideDown(5000);
-           });
-           $("#button2").click(function(){
-                $("#div2").slideToggle(5000);
-           });
-           $("#button3").click(function(){
-                $("#div2").stop();
-           });
-           $("#button3").click(function(){
-                $("#div1").stop();
-           });
-          
-        });
-    </script>
-</head>
-<body>
-    <button type="button" id="button3">Stop</button><br>
-    <button type="button" id="button">Slide Up</button>
-    <button type="button" id="button1">Slide Down</button><br><br>
-    
-    <div id="div1"></div><br>
-  
-    <button type="button" id="button2">Slide Toggle</button><br><br>
-    <div id="div2"></div>
-</body>
+    <head>
+        <title>Document</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+        <style>
+            #div1{
+                height: 100px;
+                width: 100px;
+                background-color: aqua;
+            }
+            #div2{
+                height: 100px;
+                width: 100px;
+                background-color: red;
+            }
+        </style>
+        <script>
+
+            $(document).ready(function(){
+
+                //for a slideup effect
+               $("#button").click(function(){
+                    $("#div1").slideUp(5000);
+               });
+
+                //for a slidedown effect
+               $("#button1").click(function(){
+                    $("#div1").slideDown(5000);
+               });
+
+                //for a slidetoggle effect
+               $("#button2").click(function(){
+                    $("#div2").slideToggle(5000);
+               });
+
+                //for a stop in between animation
+               $("#button3").click(function(){
+                    $("#div2").stop();
+                    $("#div1").stop();
+               });
+
+            });
+        </script>
+    </head>
+    <body>
+        <button type="button" id="button3">Stop</button><br>
+        <button type="button" id="button">Slide Up</button>
+        <button type="button" id="button1">Slide Down</button><br><br>
+        <div id="div1"></div><br>
+        <button type="button" id="button2">Slide Toggle</button><br><br>
+        <div id="div2"></div>
+    </body>
 </html>
