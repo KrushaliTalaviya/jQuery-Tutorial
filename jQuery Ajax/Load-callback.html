@@ -6,7 +6,8 @@
         <script>
            $(document).ready(function() {
 
-                $("button").click(function() 
+                //click the button and change the page content using call back
+                $("button").click(function()  
                     $("#div1").load("1.txt", function(responseTxt, statusTxt, xhr) {
                         if (statusTxt == "success") {
                             alert("you loaded data successfully");
