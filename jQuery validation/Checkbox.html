@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                if($('input[type="checkbox"]').is(":checked"))
-                {
-                    document.write("<h2>Your Welcome</h2>")
-                    return true;
-                }
-                else if($('input[type="checkbox"]').is(":not(:checked)"))
-                {
-                    alert("please follow the terms and conditions");
-                    return false;
-                }
+    <head>
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+                //checkbox validation
+                $("button").click(function(){
+                    if($('input[type="checkbox"]').is(":checked"))
+                    {
+                        document.write("<h2>Your Welcome</h2>")
+                        return true;
+                    }
+                    else if($('input[type="checkbox"]').is(":not(:checked)"))
+                    {
+                        alert("please follow the terms and conditions");
+                        return false;
+                    }
+                });
+                
             });
-        });
-    </script>
-    
-</head>
-<body>
-    <div id="div1">
-        <form align="center">
-            <label>Enter Your Name:</label>
-            <input type="text" name="name" value=""><br><br>
-            <label>Enter Your Email:</label>
-            <input type="email" name="email" value=""><br><br>
-            <label>Enter Your Password</label>
-            <input type="password" name="password" value=""><br><br>
-            <p><input type="checkbox">I agree the terms & conditions</p><br>           
-            <button>Submit</button>                        
-        </form>
-    </div>
-</body>
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <form align="center">
+                <label>Enter Your Name:</label>
+                <input type="text" name="name" value="" /><br><br>
+                <label>Enter Your Email:</label>
+                <input type="email" name="email" value="" /><br><br>
+                <label>Enter Your Password</label>
+                <input type="password" name="password" value="" /><br><br>
+                <p><input type="checkbox" />I agree the terms & conditions</p><br>           
+                <button>Submit</button>                        
+            </form>
+        </div>
+    </body>
 </html>
