@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-   
-    <script>
-        $(document).ready(function(){
-            $("select").change(function(){
-                document.getElementById("span1").innerHTML="You are  changed selction and your selection is: "+document.getElementById("sel").value;
-            });
-            $("form").submit(function(event){
-                if($("input:first").val()==="hello"){
-                    $("#span2").text("success").show();
-                    return;
-                }
-            
+    <head>
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+        <script>
+            $(document).ready(function(){
+                
+                //change inner HTML
+                $("select").change(function(){
+                    document.getElementById("span1").innerHTML="You are  changed selction and your selection is: "+document.getElementById("sel").value;
+                });
+                
+                //input verification if input is hello than success
+                $("form").submit(function(event){
+                    if($("input:first").val()==="hello"){
+                        $("#span2").text("success").show();
+                        return;
+                    }
                     $("#span2").text("not valid").show().fadeOut(2000);
                     event.preventDefault();
+                });
                 
-
             });
-        });
-        
-
-    </script>
-
-</head>
-<body>
-    <p>Change the selection</p>
-   <select id="sel">
-        <option>farari</option>;
-        <option>fortuner</option>
-        <option selected="selected">BMW</option>
-        <option>Thar</option>
-        <option>Audi</option>
-   </select>
-   <span style="color: red;" id="span1"></span>
-   <p>
-    enter hello for submit
-   </p>
-   <form>
-   <input type="text">
-   <input type="submit">
-   </form>
-   
-   <span style="color: blue;" id="span2"></span>
-</body>
+        </script>
+    </head>
+    <body>
+       <p>Change the selection</p>
+       <select id="sel">
+            <option>farari</option>;
+            <option>fortuner</option>
+            <option selected="selected">BMW</option>
+            <option>Thar</option>
+            <option>Audi</option>
+       </select>
+       <span style="color: red;" id="span1"></span>
+       <p>enter hello for submit</p>
+       <form>
+            <input type="text">
+            <input type="submit">
+       </form>
+       <span style="color: blue;" id="span2"></span>
+    </body>
 </html>
