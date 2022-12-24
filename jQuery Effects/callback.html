@@ -3,25 +3,24 @@
 <head>
     <title>Document</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
-    
     <script>
         $(document).ready(function(){
+            
+            //for hide effect
             $("button").click(function(){
                 $("#div1").hide("slow",function(){
                     alert("div1 is now hide");
                 });
             });
-        });
+            
+        });     
     </script>
 </head>
 <body>
     <button type="button" id="button">Click me</button><br><br>
-    
         <div id="div1">
             <h1>this is a H1 tag</h1>
             <p>this is a p tag</p>
         </div>
-        
-   
 </body>
 </html>
