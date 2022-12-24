@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $("#a1").attr({"href":"https://www.google.com/"});
-            });
+    <head>
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+                //without use callback
+                $("button").click(function(){
+                    $("#a1").attr({"href":"https://www.google.com/"});
+                });
 
-            //using the callback
-            $("#button1").click(function(){
-                $("#a2").attr("href",function(i,or){
-                return "https://www.instagram.com/";
-                 });
+                //using the callback
+                $("#button1").click(function(){
+                    $("#a2").attr("href",function(i,or){
+                    return "https://www.instagram.com/";
+                     });
+                });
+                
             });
-        });
-    </script>
-</head>
-<body>
-    
-    <a href="https://www.javatpoint.com/" target="_blank" id="a1">www.javatpoint.com</a>
-    
-    <button>Submit</button>
-    <br><br>
-    <a href="https://www.javatpoint.com/" target="_blank" id="a2">www.javatpoint.com</a>
-    
-    <button id="button1">Submit</button>
-    <p>click the button the change the value of link</p>
-</body>
+        </script>
+    </head>
+    <body>
+        <a href="https://www.javatpoint.com/" target="_blank" id="a1">www.javatpoint.com</a>
+        <button>Submit</button>
+        <br><br>
+        <a href="https://www.javatpoint.com/" target="_blank" id="a2">www.javatpoint.com</a>
+        <button id="button1">Submit</button>
+        <p>click the button the change the value of link</p>
+    </body>
 </html>
