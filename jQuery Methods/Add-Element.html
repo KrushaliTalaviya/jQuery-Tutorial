@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            //Using Append
-            $("#btn1").click(function(){
-                $("p").append(" this is append use");
-            });
-            $("#btn2").click(function(){
-                $("ol").append("<li>Four</li>");
-            });
-            //using prepend
-            $("#btn3").click(function(){
-                $("p").prepend(" this is append use");
-            });
-            $("#btn4").click(function(){
-                $("ol").prepend("<li>Four</li>");
-            });
+    <head>
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                //Using Append
+                $("#btn1").click(function(){
+                    $("p").append(" this is append use");
+                });
+                $("#btn2").click(function(){
+                    $("ol").append("<li>Four</li>");
+                });
+                //using prepend
+                $("#btn3").click(function(){
+                    $("p").prepend(" this is append use");
+                });
+                $("#btn4").click(function(){
+                    $("ol").prepend("<li>Four</li>");
+                });
 
-            //using add after
-            $("#btn5").click(function(){
-                $("img").after("This is a using after()");
+                //using add text after img
+                $("#btn5").click(function(){
+                    $("img").after("This is a using after()");
+                });
+                
+                //using add text before img
+                $("#btn6").click(function(){
+                    $("img").before("This is using Before()");
+                });
+
             });
-            $("#btn6").click(function(){
-                $("img").before("This is using Before()");
-            });
-            
-        });
-    </script>
-    <script>
-        function appendtext(){
-            var text1="<p>text</p>";
-            var text2=$("<p></p>").text("text");
-            var text3=document.createElement("p");
-            text3.innerHTML="text";
-            $("body").append(text1,text2,text3);
-        }
-        //after
-        function afterimage(){
-            var text="<p>this is a img</p>";
-            var text1=document.createElement("i");
-            text1.innerHTML="text";
-            $("img").after(text,text1);
+        </script>
+        <script>
+            function appendtext(){
+                
+                var text1="<p>text</p>";
+                var text2=$("<p></p>").text("text");
+                var text3=document.createElement("p");
+                text3.innerHTML="text";
+                $("body").append(text1,text2,text3);
+                
             }
-    </script>
-</head>
-<body>
-    <p >This is a one.</p>
-    <p >This is a Two.</p>
-    <ol>
-        <li>one</li>
-        <li>Two</li>
-        <li>Three</li>
-    </ol>
-    <button id="btn1">using append p tag.</button>
-    <button id="btn2">using append li tag</button>
-    <button id="btn3">using append p tag.</button>
-    <button id="btn4">using append li tag</button>
-    <button onclick="appendtext()">Append</button><br><br></bt>
-    <img src="C:\Users\krush\Desktop\QDEV\HTML-CSS\webpage1\logo.png" height="100px" width="100px"><br>
-    <button id="btn5">using after() </button>
-    <button id="btn6">using before()</button>
-    <button id="btn7" onclick="afterimage()">after text()</button>
-</body>
+            
+            //after
+            function afterimage(){
+                
+                var text="<p>this is a img</p>";
+                var text1=document.createElement("i");
+                text1.innerHTML="text";
+                $("img").after(text,text1);
+                
+            }
+        </script>
+    </head>
+    <body>
+        <p >This is a one.</p>
+        <p >This is a Two.</p>
+        <ol>
+            <li>one</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ol>
+        <button id="btn1">using append p tag.</button>
+        <button id="btn2">using append li tag</button>
+        <button id="btn3">using append p tag.</button>
+        <button id="btn4">using append li tag</button>
+        <button onclick="appendtext()">Append</button><br><br></bt>
+        <img src="C:\Users\krush\Desktop\QDEV\HTML-CSS\webpage1\logo.png" height="100px" width="100px"><br>
+        <button id="btn5">using after() </button>
+        <button id="btn6">using before()</button>
+        <button id="btn7" onclick="afterimage()">after text()</button>
+    </body>
 </html>
