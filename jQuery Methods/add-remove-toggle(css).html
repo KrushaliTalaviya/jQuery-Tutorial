@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#btn1").click(function(){
-                $("div").addClass("div1");
-                $("h1,h2,p").addClass("blue");
-            }); 
-            $("#btn2").click(function(){
-                $("div").removeClass("div1");
-                $("h1,h2,p").removeClass("blue");
-            }); 
-            $("#btn3").click(function(){
-                $("div").toggleClass("div1");
-                $("h1,h2,p").toggleClass("blue");
-            }); 
-        });
-    </script>
-    <style>
-        .blue{
-            color: yellowgreen;
-        }
-        .div1{
-            color:white;
-            background-color: black;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div>This is special Text</div>
-    <p>This is a paragraph</p>
-    <h1>This is a h1 tag</h1>
-    <h2>This is a h2 tag</h2>
-    <button id="btn1">Addclass</button>
-    <button id="btn2">Removeclass</button>
-    <button id="btn3">Toggleclass</button>
-</body>
+    <head>
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+                //add class method
+                $("#btn1").click(function(){
+                    $("div").addClass("div1");
+                    $("h1,h2,p").addClass("blue");
+                }); 
+                
+                //remove class method
+                $("#btn2").click(function(){
+                    $("div").removeClass("div1");
+                    $("h1,h2,p").removeClass("blue");
+                }); 
+                
+                //toggle class method
+                $("#btn3").click(function(){
+                    $("div").toggleClass("div1");
+                    $("h1,h2,p").toggleClass("blue");
+                }); 
+            });
+        </script>
+        <style>
+            .blue{
+                color: yellowgreen;
+            }
+            .div1{
+                color:white;
+                background-color: black;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>This is special Text</div>
+        <p>This is a paragraph</p>
+        <h1>This is a h1 tag</h1>
+        <h2>This is a h2 tag</h2>
+        <button id="btn1">Addclass</button>
+        <button id="btn2">Removeclass</button>
+        <button id="btn3">Toggleclass</button>
+    </body>
 </html>
